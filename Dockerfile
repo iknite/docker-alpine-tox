@@ -1,7 +1,7 @@
 FROM python:3-alpine
 
-RUN groupadd --gid 1000 dummy \
-  && useradd --uid 1000 --gid dummy
+RUN addgroup -S -g 1000 dummy \
+  && adduser -D -H -u 1000 -G dummy
 
 RUN apk add --no-cache python git build-base python3-dev python-dev
 
