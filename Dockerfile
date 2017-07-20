@@ -8,7 +8,3 @@ RUN apk add --no-cache python git build-base python3-dev python-dev
 RUN python -m ensurepip
 
 RUN pip install tox
-
-ENTRYPOINT ['tox']
-
-COMMAND ['tox']
